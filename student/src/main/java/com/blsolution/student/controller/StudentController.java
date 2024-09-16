@@ -25,7 +25,7 @@ public class StudentController {
 	@Autowired
 	private StudentService studentService;
 	
-	@GetMapping("")
+	@GetMapping("/")
 	public ResponseEntity<List<Student>> findAll(){
 		return ResponseEntity
 				.ok(this.studentService.findAll()); 
@@ -37,14 +37,14 @@ public class StudentController {
 				.ok(this.studentService.findById(idStudent));
 	}
 	
-	@PostMapping("/create")
+	@PostMapping("/")
 	public ResponseEntity<Student> saveStudent(@RequestBody Student student) {
 		return ResponseEntity
 				.status(HttpStatus.CREATED)
 				.body(this.studentService.saveStudent(student));
 	}
 	
-	@PutMapping("/update")
+	@PutMapping("/")
 	public ResponseEntity<String> updateStudent(@RequestParam(name = "idStudent") Long idStudent,
 								@RequestBody Student student) {
 		return ResponseEntity
@@ -61,6 +61,5 @@ public class StudentController {
 	public ResponseEntity<List<Student>> finAlldByCourseId(@PathVariable("courseId") Long courseId){
 		return ResponseEntity
 				.ok(this.studentService.finAlldByCourseId(courseId));
-	}
-	
+	}	
 }

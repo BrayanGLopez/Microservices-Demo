@@ -16,19 +16,6 @@
 	<name>gateway</name>
 	<description>Este es el microservicio que se encargara de redireccionar las
 		peticiones a cada uno de los microservicios</description>
-	<url />
-	<licenses>
-		<license />
-	</licenses>
-	<developers>
-		<developer />
-	</developers>
-	<scm>
-		<connection />
-		<developerConnection />
-		<tag />
-		<url />
-	</scm>
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2023.0.3</spring-cloud.version>
@@ -44,7 +31,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-gateway-mvc</artifactId>
+			<artifactId>spring-cloud-starter-gateway</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
